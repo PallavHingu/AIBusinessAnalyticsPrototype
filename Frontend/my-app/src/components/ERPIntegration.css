@@ -1,0 +1,64 @@
+.box {
+    width: 17.63rem;
+    height: 22.56rem;
+    position: relative;
+    border-radius: var(--br-base);
+    background-color: var(--white);
+    box-shadow: 0 7px 85px rgba(28, 79, 165, 0.07);
+    border: 2px solid var(--blue);
+    box-sizing: border-box;
+    text-align: left;
+    font-size: var(--font-size-lg);
+    color: var(--black);
+    font-family: var(--font-averia-libre);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* overflow-y: scroll;
+    overflow-x: hidden; */
+}
+
+.erpLogo {
+    width: 8em;
+    max-height: 10em;
+}
+
+.container {
+    border-color: black;
+    border-width: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: scroll;
+
+}
+
+.erp {
+    width: 8em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.erpId {
+    font-size: small;
+    color: gray;
+    padding-top: 0.4rem;
+}
+
+.erpTitle {
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.erpStatus {
+    color: green;
+    font-size: large;
+    font-weight: bold;
+    padding-top: 0.5rem;
+}

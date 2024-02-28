@@ -1,0 +1,38 @@
+.timeframepicker,
+.unitpicker {
+  top: 0;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-whitesmoke);
+  box-sizing: border-box;
+}
+.timeframepicker {
+  position: absolute;
+  left: calc(50% + 71px);
+  width: 5.56rem;
+  height: 1.44rem;
+}
+.unitpicker {
+  left: calc(50% - 24px);
+  width: 4.69rem;
+}
+.filters,
+.unitpicker,
+.viewpicker {
+  position: absolute;
+  height: 1.44rem;
+}
+.viewpicker {
+  top: 0;
+  left: calc(50% - 160px);
+  border-radius: var(--br-31xl);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-whitesmoke);
+  box-sizing: border-box;
+  width: 7.25rem;
+}
+.filters {
+  top: 5.81rem;
+  left: calc(50% + 283px);
+  width: 20rem;
+}

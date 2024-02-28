@@ -1,0 +1,89 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Python application
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+env:
+  PROJECT_ID: burner-lukpadmo  # TODO: update Google Cloud project id
+  GAR_LOCATION: us-east1 # TODO: update Artifact Registry location
+  SERVICE: chat-backend-prod # TODO: update Cloud Run service name
+  REGION: us-east1  # TODO: update Cloud Run service region
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 pytest
+        pip install Cython
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Lint with flake8
+      run: |
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    # - name: Test with pytest
+    #   run: |
+    #     pytest
+
+  build-and-push-to-gcr-service-account:
+    name: Build & push and deploy to Cloud Run
+    runs-on: ubuntu-latest
+    needs:
+      [build]
+    # defaults:
+    #   run: 
+    #      working-directory: ./my-app
+    steps:
+      - uses: actions/checkout@v3
+      - name: Authenticate to Google Cloud
+        id: auth
+        uses: google-github-actions/auth@v0
+        with:
+          credentials_json: '${{ secrets.GCP_CREDENTIALS }}'
+      - name: Building and pushing the image
+        uses: RafikFarhad/push-to-gcr-github-action@v5-beta
+        # uses: RafikFarhad/push-to-gcr-github-action@v5-beta # <- use this on your workflow
+        with:
+          # gcloud_service_key: ${{ secrets.JSON_GCLOUD_SERVICE_ACCOUNT_JSON }} # <- not needed when used with google-github-actions/auth@v0
+          registry: ${{ env.GAR_LOCATION }}-docker.pkg.dev
+          project_id: ${{env.PROJECT_ID}}/chat-backend-prod
+          image_name: chat_backend
+          image_tag: ${{ env.GITHUB_SHA }}
+          dockerfile: ./Dockerfile
+          context: .
+
+      - name: Deploy to Cloud Run
+        id: deploy
+        uses: google-github-actions/deploy-cloudrun@v0
+        with:
+          service: ${{ env.SERVICE }}
+          region: ${{ env.REGION }}
+          # NOTE: If using a pre-built image, update the image name here
+          image: ${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.SERVICE }}/chat_backend:latest
+
+      # If required, use the Cloud Run url output in later steps
+      - name: Show Output
+        run: echo ${{ steps.deploy.outputs.url }}
+
+    
+  
+  

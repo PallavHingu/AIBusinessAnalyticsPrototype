@@ -1,0 +1,127 @@
+.wcbox {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 306.1px);
+  border-radius: var(--br-6xl);
+  background-color: var(--color-white);
+  backdrop-filter: blur(4px);
+  width: 38.26rem;
+  height: 20.88rem;
+}
+.p,
+.p1,
+.unlocked {
+  margin: 0;
+}
+.p,
+.p1 {
+  font-size: var(--font-size-9xs);
+}
+.p1 {
+  font-size: var(--font-size-5xl);
+  font-family: var(--font-cabin-condensed);
+}
+.unlocked-42500000-locked-container1 {
+  line-break: anywhere;
+  width: 100%;
+}
+.accounts-payable-7500000-container,
+.unlocked-42500000-locked-container {
+  position: absolute;
+  top: 0.56rem;
+  left: calc(50% + 91.22px);
+  white-space: pre-wrap;
+  display: flex;
+  align-items: center;
+  width: 11.28rem;
+  height: 9.06rem;
+  font-size: var(--font-size-xs);
+}
+.accounts-payable-7500000-container {
+  top: 10.56rem;
+}
+.assets,
+.liabilities {
+  position: absolute;
+  top: 4.5rem;
+  left: calc(50% - 3.04px);
+  display: flex;
+  align-items: center;
+  width: 3.36rem;
+  height: 2rem;
+}
+.liabilities {
+  top: 14.31rem;
+  width: 4.62rem;
+  height: 1.38rem;
+}
+.wchortizontalline,
+.wcverticalline {
+  position: absolute;
+  box-sizing: border-box;
+}
+.wchortizontalline {
+  top: 10.03rem;
+  left: calc(50% - 3.54px);
+  border-top: 1px solid var(--color-whitesmoke);
+  width: 18.12rem;
+  height: 0.06rem;
+}
+.wcverticalline {
+  top: 0.47rem;
+  left: calc(50% - 31.92px);
+  border-right: 1px solid var(--color-whitesmoke);
+  width: 0.06rem;
+  height: 19.19rem;
+}
+.p8 {
+  margin: 0;
+  font-size: var(--font-size-xl);
+}
+.total-working-capital-container {
+  position: absolute;
+  top: 14.46rem;
+  left: calc(50% - 250.5px);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  width: 10.45rem;
+}
+.unlockedcolor {
+  top: 0.56rem;
+  background-color: var(--color-crimson-200);
+}
+.apcolor,
+.lockedcolor,
+.stbcolor,
+.unlockedcolor {
+  position: absolute;
+  left: calc(50% + 91.22px);
+  border-radius: var(--br-10xs);
+  width: 0.89rem;
+  height: 0.88rem;
+}
+.lockedcolor {
+  top: 4.69rem;
+  background-color: var(--color-gainsboro-100);
+  border: 1px solid var(--color-darkgray);
+  box-sizing: border-box;
+}
+.apcolor,
+.stbcolor {
+  top: 10.69rem;
+  background-color: var(--color-darkgray);
+}
+.stbcolor {
+  top: 15.69rem;
+  background-color: var(--color-black);
+}
+.working-capital {
+  position: relative;
+  width: 38.26rem;
+  height: 20.88rem;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-black);
+  font-family: var(--font-cabin);
+}

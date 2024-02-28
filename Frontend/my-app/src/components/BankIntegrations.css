@@ -1,0 +1,85 @@
+
+.bankIcon {
+  position: relative;
+  border-radius: var(--br-5xs);
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+} 
+.bank-integrations {
+  width: 31.88rem;
+  height: 22.56rem;
+  position: relative;
+  border-radius: var(--br-base);
+  background-color: var(--white);
+  box-shadow: 0 7px 85px rgba(28, 79, 165, 0.07);
+  border: 2px solid var(--blue);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: var(--font-size-lg);
+  color: var(--black);
+  font-family: var(--font-averia-libre);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.your-business-bank {
+  position: relative;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+}
+.bank {
+  position: relative;
+  display: flex;
+  flex: 100%;
+  padding: 1rem 2rem;
+}
+
+.bankInfo {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.5rem;
+}
+
+.banks {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.bankName {
+  top: 0;
+  font-size: var(--font-size-3xl);
+  line-height: 2.25rem;
+  color: var(--black);
+}
+
+.sortCode,
+.accountNo {
+  color: gray;
+}
+
+.connected, 
+.connectedIcon {
+  color: green;
+  font-size: large;
+}
+
+.connected {
+  margin-left: 0.4rem ;
+}
+
+.connectedIcon {
+  margin-left: 1rem;
+}
+
+.connection {
+  display: flex;
+  align-items: center;
+}
+
+.bankNameStatus {
+  display: flex;
+  flex-wrap: nowrap;
+}

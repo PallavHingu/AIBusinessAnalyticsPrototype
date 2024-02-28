@@ -1,0 +1,31 @@
+.rm-child {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--br-31xl);
+  background-color: var(--color-crimson-100);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0-4px 4px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--color-white);
+  box-sizing: border-box;
+  width: 10.13rem;
+  height: 3.88rem;
+}
+.chat-to-your {
+  position: absolute;
+  right: 1.19rem;
+  bottom: 0.56rem;
+  display: flex;
+  align-items: center;
+  width: 5.5rem;
+  height: 2.81rem;
+  mix-blend-mode: normal;
+}
+.rm {
+  position: absolute;
+  right: 0.94rem;
+  bottom: 0.31rem;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-white);
+  font-family: var(--font-cabin);
+}

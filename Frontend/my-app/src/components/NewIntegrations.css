@@ -1,0 +1,32 @@
+* {
+    font-family: 'Cabin';
+}
+
+.leftside {
+    width: 70%;
+    height: 100%;
+}
+
+.title {
+    color: red;
+    border-bottom: 2px solid #E6E6E6;
+    text-align: center;
+}
+
+.mainbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.topBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    background-color: #FFFFFF;
+    padding-bottom: 3vh;
+}

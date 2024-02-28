@@ -1,0 +1,71 @@
+.dpobox {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 141px);
+  border-radius: var(--br-6xl);
+  background-color: var(--color-white);
+  backdrop-filter: blur(4px);
+  width: 17.63rem;
+  height: 20.88rem;
+}
+.days-payable-outstanding1 {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 123px);
+  font-size: var(--font-size-base);
+  display: flex;
+  align-items: center;
+  width: 12.5rem;
+  height: 3.38rem;
+}
+.estimated-to-be-container1 {
+  line-break: anywhere;
+  width: 100%;
+}
+.b,
+.estimated-to-be-container,
+.total-value-of {
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+.estimated-to-be-container {
+  top: 2.06rem;
+  left: calc(50% - 101px);
+  width: 11.13rem;
+  height: 2.88rem;
+}
+.b,
+.total-value-of {
+  left: calc(50% - 123px);
+}
+.b {
+  top: 3.5rem;
+  font-size: var(--font-size-5xl);
+  font-family: var(--font-cabin-condensed);
+  width: 9rem;
+  height: 3.06rem;
+}
+.total-value-of {
+  top: 4.94rem;
+  width: 10.56rem;
+  height: 3.13rem;
+}
+.dpoline {
+  position: absolute;
+  top: 7.59rem;
+  left: calc(50% - 133.5px);
+  border-top: 1px solid var(--color-whitesmoke);
+  box-sizing: border-box;
+  width: 16.63rem;
+  height: 0.06rem;
+}
+.days-payable-outstanding {
+  position: relative;
+  width: 17.63rem;
+  height: 20.88rem;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-black);
+  font-family: var(--font-cabin);
+}

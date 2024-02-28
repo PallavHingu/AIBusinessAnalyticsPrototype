@@ -1,0 +1,101 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    background: #F6F7FB;
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 2rem 0 4rem 0;
+    font-size: 20px;
+  }
+
+  .container {
+    height: 100vh;
+    width: 50%;
+    float: right;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+  }
+
+  .chatbot {
+    width: 50%;
+    border: 2px solid black;
+    float: left;
+  }
+  
+  .accordion {
+    max-width: 600px;
+    margin: 2rem auto;
+    opacity: 100%;
+  }
+  
+  .accordion-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: #F6F7FB;
+    border-bottom: 2px solid black;
+  }
+  
+  .accordion-title:hover {
+    background-color: #E6E6E6;
+  }
+  
+  .accordion-title,
+  .accordion-content {
+    padding: 1rem;
+  }
+  
+  .accordion-content {
+    background-color: #F6F7FB;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .image {
+    height: 100px;
+    padding: 5px;
+  }
+
+  .testButton {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+  }
+
+  .testButton2 {
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+  }
+  
+  @media screen and (max-width: 700px) {
+    body {
+      font-size: 18px;
+    }
+  
+    .accordion {
+      width: 90%;
+    }
+  } */
+
+/* .rsc-submit-button {
+  filter: invert(1) brightness(5);
+} */
+
+.chatPageBody {
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+}

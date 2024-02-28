@@ -1,0 +1,90 @@
+Bot: Good day! Welcome to your personalized AI assistant CFO; this feature allows you to leverage the power of AI to measure, grow and report on the overall health of your business. This AI assistant securely & confidentially links seamlessly with all of your corporate banking accounts & your ERP system in order to provide invaluable insights. This includes a real time live view of your total working capital so you can avoid any nasty surprises. I will begin by initialising these integrations and using this data to build out a live dashboard with key metrics that help you understand and communicate with more confidence about the current state of your fir 
+Before we proceed, may I kindly ask for your business name?
+User: The business name is XY Global
+Bot: Next, I would like to confirm if it's acceptable to continue and request some information regarding all the business banks associated with your account. This data will only be used for the purposes of building you a bespoke business dashboard through the power of generative AI. 
+Please provide the name of all banks your business has current relationships with. 
+Rest assured, your data will be handled securely and kept confidential.
+User: NatWest, Barclays
+Bot: For the NatWest account please provide the ‘Account Number’ & ‘Sort Code’. We will then begin integrating this account into your live dashboard.
+Please respond in the format: “123456789, 12-34-56”
+User: 7149088, 60-09-10
+Bot: Please approve the push notification sent to the mobile banking apps associated with your NatWest account to authorise.
+Bot: Thanks! We have received authorisation from NatWest. We have securely and temporarily stored your data.
+Bot: For the Barclays account please provide the ‘Account Number’ & ‘Sort Code’. We will then begin integrating this account into your live dashboard.
+Please respond in the format: “123456789, 12-34-56”
+User: 7149089, 60-09-11
+Bot: Please approve the push notification sent to the mobile banking apps associated with your NatWest account to authorise.
+Bot: Thanks! We have received authorisation from Barclays. We have securely and temporarily stored your data.
+Bot: Which system do you use for ERP reporting? 
+User: Oracle
+Bot: To integrate data from your ERP into your bespoke AI generated dashboard please provide your ‘Web Service Access Key’; this can be found in your ERP account settings. If you need assistance to find this key please contact your ERP provider.
+User: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Imk2bEdrM0Zaen 
+Bot: Perfect, thanks for providing your unique ERP Web Service Access Key, we can now incorporate data stored in your ERP into your bespoke dashboard.
+Bot: Please quickly review the generated elements, metrics & insights shown on the left. If you’re happy to proceed please reply ‘Yes’ to continue, alternatively reply ‘No’.
+User: Yes
+Bot: Would you like to implement additional metrics into your dashboard?
+User: No
+Bot: Would you like to use our intelligent forecasting capabilities to generate working capital insights?
+User: Yes
+Bot: Your dashboard is now ready to be generated. Please select the ‘Generate Dashboard’ button to view in full screen. 
+icons = {"natwest" : ""}
+
+{"conversation": [],
+ "data": {
+    "businessName": "",
+    "shownComponents": [],
+    "shownTopComponents": [],
+    "bankList: ["natwest", "barclays"],
+    "bankInfo": [{
+        "bankName": "",
+        "accountNo": "",
+        "sortCode": "",
+        "icon": "",
+        "connected": false}
+    ],
+    "erpInfo": {
+        "erpSystem": "",
+        "erpKey": "",
+        "icon": ""
+    }
+ }}
+
+ add all banks to list of banks, add each to bankInfo List
+    - added bank name
+    - icon added
+    - connected false
+    blank other info
+
+use loop to check and ask for info until its all filled out. 
+    
+
+
+Bot: Good day! Welcome to your personalized AI assistant CFO; this feature allows you to leverage the power of AI to measure, grow and report on the overall health of your business. This AI assistant securely & confidentially links seamlessly with all of your corporate banking accounts & your ERP system in order to provide invaluable insights. This includes a real time live view of your total working capital so you can avoid any nasty surprises. I will begin by initialising these integrations and using this data to build out a live dashboard with key metrics that help you understand and communicate with more confidence about the current state of your fir 
+Before we proceed, may I kindly ask for your business name?
+Bot: Next, I would like to confirm if it's acceptable to continue and request some information regarding all the business banks associated with your account. This data will only be used for the purposes of building you a bespoke business dashboard through the power of generative AI. 
+Please provide the name of all banks your business has current relationships with. 
+Rest assured, your data will be handled securely and kept confidential.
+Bot: For the NatWest account please provide the ‘Account Number’ & ‘Sort Code’. We will then begin integrating this account into your live dashboard.
+Please respond in the format: “123456789, 12-34-56”
+Bot: Please approve the push notification sent to the mobile banking apps associated with your NatWest account to authorise.
+Bot: Thanks! We have received authorisation from NatWest. We have securely and temporarily stored your data.
+Bot: For the Barclays account please provide the ‘Account Number’ & ‘Sort Code’. We will then begin integrating this account into your live dashboard.
+Please respond in the format: “123456789, 12-34-56”
+Bot: Please approve the push notification sent to the mobile banking apps associated with your NatWest account to authorise.
+Bot: Thanks! We have received authorisation from Barclays. We have securely and temporarily stored your data.
+Bot: Which system do you use for ERP reporting? 
+Bot: To integrate data from your ERP into your bespoke AI generated dashboard please provide your ‘Web Service Access Key’; this can be found in your ERP account settings. If you need assistance to find this key please contact your ERP provider.
+Bot: Perfect, thanks for providing your unique ERP Web Service Access Key, we can now incorporate data stored in your ERP into your bespoke dashboard.
+Bot: Please quickly review the generated elements, metrics & insights shown on the left. If you’re happy to proceed please reply ‘Yes’ to continue, alternatively reply ‘No’.
+Bot: Would you like to implement additional metrics into your dashboard?
+Bot: Would you like to use our intelligent forecasting capabilities to generate working capital insights?
+Bot: Your dashboard is now ready to be generated. Please select the ‘Generate Dashboard’ button to view in full screen. 
+
+curl -X POST http://127.0.0.1:8080/api/chat    -H "Content-Type: application/json"   -d '{"conversation": [{"message": "Good day! Welcome to your personalized AI assistant CFO; this feature allows you to leverage the power of AI to measure, grow and report on the overall health of your business. This AI assistant securely & confidentially links seamlessly with all of your corporate banking accounts & your ERP system in order to provide invaluable insights. This includes a real time live view of your total working capital so you can avoid any nasty surprises. I will begin by initialising these integrations and using this data to build out a live dashboard with key metrics that help you understand and communicate with more confidence about the current state of your fir<br>Before we proceed, may I kindly ask for your business name?", "user": false}, {"message": "yes", "user": true}, {"message": "Next, I would like to confirm if it's acceptable to continue and request some information regarding all the business banks associated with your account. This data will only be used for the purposes of building you a bespoke business dashboard through the power of generative AI.<br>Please provide the name of all banks your business has current relationships with.<br>Rest assured, your data will be handled securely and kept confidential.", "user": false}, {"message": "Barclays, Natwest", "user": true}], "data": {"bankInfo": [], "businessName": "yes", "erpInfo": {"erpKey": "", "erpSystem": "", "icon": ""}, "shownComponents": [], "shownTopComponents": []}}'
+
+curl -X POST http://127.0.0.1:8080/api/chat    -H "Content-Type: application/json"   -d '{"conversation": [{"message": "Good day! Welcome to your personalized AI assistant CFO; this feature allows you to leverage the power of AI to measure, grow and report on the overall health of your business. This AI assistant securely & confidentially links seamlessly with all of your corporate banking accounts & your ERP system in order to provide invaluable insights. This includes a real time live view of your total working capital so you can avoid any nasty surprises. I will begin by initialising these integrations and using this data to build out a live dashboard with key metrics that help you understand and communicate with more confidence about the current state of your fir<br>Before we proceed, may I kindly ask for your business name?", "user": false}, {"message": "yes", "user": true}, {"message": "Next, I would like to confirm if its acceptable to continue and request some information regarding all the business banks associated with your account. This data will only be used for the purposes of building you a bespoke business dashboard through the power of generative AI.<br>Please provide the name of all banks your business has current relationships with.<br>Rest assured, your data will be handled securely and kept confidential.", "user": false}, {"message": "Barclays, Natwest", "user": true}], "data": {"bankInfo": [], "businessName": "yes", "erpInfo": {"erpKey": "", "erpSystem": "", "icon": ""}, "shownComponents": [], "shownTopComponents": []}}'
+
+
+curl -X POST http://127.0.0.1:8080/api/chat    -H "Content-Type: application/json"   -d '{"conversation": [{"message": "Good day! Welcome to your personalized AI assistant CFO; this feature allows you to leverage the power of AI to measure, grow and report on the overall health of your business. This AI assistant securely & confidentially links seamlessly with all of your corporate banking accounts & your ERP system in order to provide invaluable insights. This includes a real time live view of your total working capital so you can avoid any nasty surprises. I will begin by initialising these integrations and using this data to build out a live dashboard with key metrics that help you understand and communicate with more confidence about the current state of your fir<br>Before we proceed, may I kindly ask for your business name?", "user": false}, {"message": "XY Global", "user": true}, {"message": Next, I would like to confirm if its acceptable to continue and request some information regarding all the business banks associated with your account. This data will only be used for the purposes of building you a bespoke business dashboard through the power of generative AI.<br>Please provide the name of all banks your business has current relationships with.<br>Rest assured, your data will be handled securely and kept confidential.", "user": false}, {"message": "Barclays, Natwest", "user": true}], "data": {"banksQueue": ["Barclays", "Natwest"], "bankInfo": [{"bankName": "Barclays", "accountNo": "123456789", "sortCode": "12-34-56", "icon": "", "connected": false}, {"bankName": "Natwest", "accountNo": "", "sortCode": "", "icon": "", "connected": false}], "businessName": "XY Global", "erpInfo": {"erpKey": "", "erpSystem": "", "icon": ""}, "shownComponents": [], "shownTopComponents": []}}'
+
+curl -X POST http://127.0.0.1:8080/api/chat    -H "Content-Type: application/json"   -d '{"conversation": [{"message": "Good day! Welcome to your personalized AI assistant CFO; this feature allows you to leverage the power of AI to measure, grow and report on the overall health of your business. This AI assistant securely & confidentially links seamlessly with all of your corporate banking accounts & your ERP system in order to provide invaluable insights. This includes a real time live view of your total working capital so you can avoid any nasty surprises. I will begin by initialising these integrations and using this data to build out a live dashboard with key metrics that help you understand and communicate with more confidence about the current state of your fir<br>Before we proceed, may I kindly ask for your business name?", "user": false}, {"message": "XY Global", "user": true}, {"message": Next, I would like to confirm if its acceptable to continue and request some information regarding all the business banks associated with your account. This data will only be used for the purposes of building you a bespoke business dashboard through the power of generative AI.<br>Please provide the name of all banks your business has current relationships with.<br>Rest assured, your data will be handled securely and kept confidential.", "user": false}, {"message": "Barclays, Natwest", "user": true}, {"message": "For the Barclays account please provide the Account Number & Sort Code. We will then begin integrating this account into your live dashboard.<br>Please respond in the format: 123456789, 12-34-56", "user": false}, {"message": "123456789, 12-34-56", "user": true}, {"message": "Please respond when you have approved the push notification sent to the mobile banking apps associated with your Barclays account to authorise.", "user": false}, {"message": "Done", "user": true}], "data": {"banksQueue": ["Barclays", "Natwest"], "bankInfo": [{"bankName": "Barclays", "accountNo": "123456789", "sortCode": "12-34-56", "icon": "", "connected": false}, {"bankName": "Natwest", "accountNo": "", "sortCode": "", "icon": "", "connected": false}], "businessName": "XY Global", "erpInfo": {"erpKey": "", "erpSystem": "", "icon": ""}, "shownComponents": [], "shownTopComponents": []}}'

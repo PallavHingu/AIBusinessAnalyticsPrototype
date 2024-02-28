@@ -1,0 +1,102 @@
+.chatBoxUI{
+    width: 30%;
+    height: 100%;
+    background-color: #EFF2F7;
+    position: absolute;
+    right: 0px;
+}
+
+
+.chatBoxContentContainer {
+    display: flex;
+    overflow: auto;
+    height: 90%;
+    flex-direction: column-reverse;
+    
+}
+
+.chatBoxContent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.chatBoxInputBox {
+    width: 90%;
+    height: 7%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: white;
+    left: 5%;
+    right: 5%;
+    border-radius: 10px;
+    border:1px solid #b4b4b4
+
+    /* margin-bottom: 5%; */
+}
+
+#userIn {
+    width: 80%;
+    margin: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 0px;
+    font-size: larger;
+}
+
+#userIn:focus {
+    outline: none;
+}
+
+#submitUserIn {
+    width: 10%;
+    margin: 2%;
+    margin-right: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; 
+    border: 0px;
+    cursor: pointer;
+}
+
+.chatBoxMessageContainer {
+    width: 100%;
+    padding: 3%;
+    display: flex;
+}
+
+.chatBoxMessageAI,
+.chatBoxMessageUser {
+    text-align: left;
+    height: auto;
+    background-color: #CAE6FB;
+    margin-left: 2%;
+    margin-right: 6%;
+    padding: 4%;
+    border-radius: 0px 12px 12px 0px;
+}
+
+.chatBoxMessageUser {
+    background-color: white;
+}
+
+
+.userIcon {
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    margin-left: 2%;
+}
+
+.sendButtonImg {
+    max-height: 100%;
+}
+
+.bandw {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1) brightness(1.5);
+    /* filter: contrast(0.5); */

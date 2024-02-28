@@ -1,0 +1,16 @@
+# Fetching the latest node image on apline linux
+FROM node:alpine
+
+WORKDIR /my-app
+
+# Installing dependencies
+COPY ./package.json ./
+
+RUN npm install --no-audit
+
+COPY . .
+
+RUN npm run test:unit --no-watch 
+
+
+CMD ["npm","run","dev"]

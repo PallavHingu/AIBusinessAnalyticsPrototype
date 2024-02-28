@@ -1,0 +1,69 @@
+.diobox {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 141px);
+  border-radius: var(--br-6xl);
+  background-color: var(--color-white);
+  backdrop-filter: blur(4px);
+  width: 17.63rem;
+  height: 20.88rem;
+}
+.forecasted-to-be-container1 {
+  line-break: anywhere;
+  width: 100%;
+}
+.forecasted-to-be-container {
+  position: absolute;
+  top: 2.06rem;
+  left: calc(50% - 92px);
+  display: flex;
+  align-items: center;
+  width: 11.81rem;
+  height: 2.63rem;
+}
+.b1 {
+  top: 3.63rem;
+  left: calc(50% - 115px);
+  font-size: var(--font-size-5xl);
+  font-family: var(--font-cabin-condensed);
+  width: 9rem;
+  height: 3.06rem;
+}
+.b1,
+.days-inventory-outstanding1,
+.total-stock-value {
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+.days-inventory-outstanding1 {
+  top: 0;
+  left: calc(50% - 115px);
+  font-size: var(--font-size-base);
+  width: 12.5rem;
+  height: 3.38rem;
+}
+.total-stock-value {
+  top: 5.13rem;
+  left: calc(50% - 116px);
+  width: 10.56rem;
+  height: 3.13rem;
+}
+.dioline {
+  position: absolute;
+  top: 7.59rem;
+  left: calc(50% - 136.5px);
+  border-top: 1px solid var(--color-whitesmoke);
+  box-sizing: border-box;
+  width: 16.63rem;
+  height: 0.06rem;
+}
+.days-inventory-outstanding {
+  position: relative;
+  width: 17.63rem;
+  height: 20.88rem;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-black);
+  font-family: var(--font-cabin);
+}

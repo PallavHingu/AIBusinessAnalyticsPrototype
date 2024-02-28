@@ -1,0 +1,1 @@
+curl -X POST https://chat-backend-dev-3yhr4scqda-ue.a.run.app/api/chat    -H "Content-Type: application/json"   -d '{"data": []}'
